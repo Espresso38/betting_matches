@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Liga typera</title>
+    <title>Obstawianie</title>
 </head>
 <body>
 <div class="navbar">
@@ -27,13 +27,7 @@
     </ul>
 </div>
 <div class="main_view">
-    <div id="text">
-        <p>Witaj w Lidze typera! <br> To tutaj będziesz mógł rywalizować z innymi <br> obstawiając mecze</p>
-        <button>Zaloguj się</button>
-    </div>
-    <div id="football">
-        <img src="footballer.png" alt="Football player">
-    </div>
+
 </div>
 <footer>@Espresso38</footer>
 </body>

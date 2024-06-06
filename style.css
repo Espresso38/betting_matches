@@ -23,11 +23,11 @@ body {
     background: transparent;
     padding: 10px 30px;
 }
-a {
+.nav_item a {
     color: #272343;
     font-size: 2.2em;
 }
-p {
+.main_view p {
     color: #272343;
     font-weight: 500;
     font-size: 2.2em;
@@ -54,7 +54,9 @@ button {
     font-weight: 500;
     font-family: 'Roboto', sans-serif;
     border-radius: 40px;
-    font-size: 2.3em;
+}
+.button a{
+    font-size: 1em;
 }
 footer {
     color: #272343;
@@ -66,4 +68,30 @@ footer {
     width: 100vw;
     border-top: 1px solid;
     border-top-color: #413f4f;;
+}
+.login_view {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.login_view p {
+    font-size: 1.2em;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+form {
+    background-color: #9dc3d1;
+    padding: 20px;
+    margin-top: 25vh;
+}
+input {
+    padding: 12px;
+}
+.rejestr a{
+    font-size: 1.2em;
+    text-decoration: none;
+    color: #272343;
+    background-color: #a6d2d2;
+    padding: 5px;
+    border-radius: 40px;
 }
