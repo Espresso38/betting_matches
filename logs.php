@@ -20,25 +20,33 @@
         $password = $_POST['password'];
 
         $login = htmlentities($login, ENT_QUOTES, "UTF-8");
-        $password = htmlentities($password, ENT_QUOTES, "UTF-8");
 
-        $stmt = $connecting->prepare("SELECT * FROM logs WHERE login = ? AND password = ?");
-        $stmt->bind_param("ss", $login, $password);
+        $stmt = $connecting->prepare("SELECT * FROM logs WHERE login = ?");
+        $stmt->bind_param("s", $login);
         $stmt->execute();
         $result = $stmt->get_result();
 
         $n_users = $result->num_rows;
         if($n_users > 0) {
-            $_SESSION['logged'] = true;
-
             $row = $result->fetch_assoc();
-            $_SESSION['id'] = $row['id'];
-            $_SESSION['login'] = $row['login'];
+            
+            if(password_verify($password, $row['password']))
+            {
+                $_SESSION['logged'] = true;
+                $_SESSION['id'] = $row['id'];
+                $_SESSION['login'] = $row['login'];
 
-            unset($_SESSION['user_error']);
-            $result->close();
-            header('Location: index.php');
-            exit();
+                unset($_SESSION['user_error']);
+                $result->close();
+                header('Location: index.php');
+                exit();
+            }
+            else 
+            {
+                $_SESSION['user_error'] = '<span>Nieprawidłowy login lub hasło!</span>';
+                header('Location: log_in.php');
+                exit();
+            }
         } else {
             $_SESSION['user_error'] = '<span>Nieprawidłowy login lub hasło!</span>';
             header('Location: log_in.php');

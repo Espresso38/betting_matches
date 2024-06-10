@@ -79,10 +79,25 @@ footer {
     padding-bottom: 10px;
     padding-top: 10px;
 }
-form {
+.login {
     background-color: #9dc3d1;
     padding: 20px;
     margin-top: 25vh;
+}
+.register_view {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.register {
+    background-color: #9dc3d1;
+    padding: 20px;
+    margin-top: 15vh;
+}
+.register_view p {
+    font-size: 1.2em;
+    padding-bottom: 10px;
+    padding-top: 10px;
 }
 input {
     padding: 12px;
@@ -94,4 +109,14 @@ input {
     background-color: #a6d2d2;
     padding: 5px;
     border-radius: 40px;
+}
+input{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.error 
+{
+    color: crimson;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
